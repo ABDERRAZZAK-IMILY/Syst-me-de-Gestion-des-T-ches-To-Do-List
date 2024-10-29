@@ -13,5 +13,9 @@ but2.addEventListener("click", func2);
 
 /*************************************************** */
 
-const dueDate = document.getElementById('dueDate');
+const dueDate = document.getElementById('dueDate').max = '2024-10-31';
 
+function maxdate(){
+  
+
+}
