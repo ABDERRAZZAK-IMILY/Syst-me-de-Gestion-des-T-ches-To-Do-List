@@ -3,164 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <meta name="description" content="A simple to-do list application to manage tasks efficiently.">
+    <title>To-Do List Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>To do list</title>
 </head>
 <body>
-   <div class="flex p-3">
-   <!-- Modal toggle -->
-<button id="myBtn" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-    add task
-  </button>
-  
-  <!-- Main modal -->
-  <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-      <div class="relative p-4 w-full max-w-md max-h-full">
-          <!-- Modal content -->
-          <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-              <!-- Modal header -->
-              <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                      Create New task
-                  </h3>
-                  <button id="myBtn2" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
-                      <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
-                      </svg>
-                      <span class="sr-only">Close modal</span>
-                  </button>
-              </div>
-              <!-- Modal body -->
-              <form class="p-4 md:p-5">
-                  <div class="grid gap-4 mb-4 grid-cols-2">
-                      <div class="col-span-2">
-                          <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                          <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Task name" required="">
-                      </div>
-                      <div class="col-span-2 sm:col-span-1">
-                        <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">proprety</label>
-                        <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                            <option selected="">select proprety</option>
-                            <option value="TO DO">P1</option>
-                            <option value="DOING">P2</option>
-                            <option value="DON">P3</option>
-                        </select>
-                    </div>
-                      <div class="col-span-2 sm:col-span-1">
-                          <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                          <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                              <option selected="">Select category</option>
-                              <option value="TO DO">TO DO</option>
-                              <option value="DOING">DOING</option>
-                              <option value="DON">DON</option>
-                          </select>
-                      </div>
-                      
-           
-                      <div  class="col-span-2">
-                        <label for="dueDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Due Date</label>
-                        <input  type="date" id="dueDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
-                    </div>
-  
-  
-                      <div class="col-span-2">
-                          <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
-                          <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Write product description here"></textarea>                    
-                      </div>
-                  </div>
-                  <button type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                      submit
-                  </button>
-              </form>
-          </div>
-      </div>
-  </div> 
-  
-
-
+    <header class="flex p-20">
+        <button id="myBtn" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
+            Add Task
+        </button>
     
-    <!----------------------------------------------------------------------------------------->
-   
-            
-          <div class='max-w-md mx-auto'>
-            <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
-                <div class="grid place-items-center h-full w-12 text-gray-300">
+
+    <!-- Main modal -->
+    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-md max-h-full ">
+            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
+                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                        Create New Task
+                    </h3>
+                    <button id="myBtn2" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Close modal</span>
+                    </button>
                 </div>
-                <input
-                class="peer h-full w-full outline-none text-sm text-gray-700 pr-2"
-                type="text"
-                id="search"
-                placeholder="Search something.." /> 
+                <form class="p-4 md:p-5">
+                    <div class="grid gap-4 mb-4 grid-cols-2">
+                        <div class="col-span-2">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Task name" required>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="property" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Property</label>
+                            <select id="property" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option selected="">Select property</option>
+                                <option value="TO DO">P1</option>
+                                <option value="DOING">P2</option>
+                                <option value="DON">P3</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2 sm:col-span-1">
+                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
+                            <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
+                                <option selected="">Select category</option>
+                                <option value="TO DO">TO DO</option>
+                                <option value="DOING">DOING</option>
+                                <option value="DON">DON</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="dueDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Due Date</label>
+                            <input type="date" id="dueDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
+                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea>
+                        </div>
+                    </div>
+                    <button id="submit" type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        Submit
+                    </button>
+                </form>
             </div>
         </div>
-      </div>
-   </div> 
-   
-   <!----------------------------------------------------------------------------------------------------------------------------->
+    </div>
 
-
-
-
-
-
-
-
-
-
-
-      <!--to---------------------------------------------------------------------------------------------------------- do-->
-      <div class="flex">
-        <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
-            <div class="px-4 py-2">
-                <h1 class="text-gray-800 font-bold text-2xl uppercase">To-Do</h1>
+    <!-- Search section -->
+    <section class="max-w-md mx-auto">
+        <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
+            <div class="grid place-items-center h-full w-12 text-gray-300">
             </div>
-            <ul class="divide-y divide-gray-200 px-4">
-                <li class="py-4">
-                    <div class="flex items-center">
-                        <label for="todo1" class="ml-3 block text-gray-900">
-                            <span class="text-lg font-medium">Page d'accueil</span>
-                        </label>
-                    </div>
-                </li>
-            </ul>
+            <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text" id="search" placeholder="Search something.." />
         </div>
-        <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
-            <div class="px-4 py-2">
-                <h1 class="text-gray-800 font-bold text-2xl uppercase">DOING</h1>
+    </section>
+ </header>
+    <!-- Task lists section -->
+    <section class="flex justify-around">
+        <div>
+            <h1 class="text-gray-800 font-bold text-2xl uppercase">TO DO</h1>
+            <div class="bg-white shadow-md rounded p-4 mb-4">
+                <h3 class="font-bold">Task Title</h3>
+                <p>Description of the task.</p>
+                <div class="flex justify-between mt-2">
+                    <button class="bg-blue-500 text-white py-1 px-3 rounded">Edit</button>
+                    <button class="bg-red-500 text-white py-1 px-3 rounded">Delete</button>
+                </div>
             </div>
-            <ul class="divide-y divide-gray-200 px-4">
-                <li class="py-4">
-                    <div class="flex items-center">
-                        <label for="todo1" class="ml-3 block text-gray-900">
-                            <span class="text-lg font-medium">Finish project proposal</span>
-                        </label>
-                    </div>
-                </li>
-                <li class="py-4">
-                    <div class="flex items-center">
-                            <span class="text-lg font-medium"></span>
-                        </label>
-                    </div>
-                </li>
-            </ul>
         </div>
-        <div class="max-w-md mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-16">
-            <div class="px-4 py-2">
-                <h1 class="text-gray-800 font-bold text-2xl uppercase">DON</h1>
+        <div>
+            <h1 class="text-gray-800 font-bold text-2xl uppercase">DOING</h1>
+            <div class="bg-white shadow-md rounded p-4 mb-4">
+                <h3 class="font-bold">Task Title</h3>
+                <p>Description of the task.</p>
+                <div class="flex justify-between mt-2">
+                    <button class="bg-blue-500 text-white py-1 px-3 rounded">Edit</button>
+                    <button class="bg-red-500 text-white py-1 px-3 rounded">Delete</button>
+                </div>
             </div>
-            <ul class="divide-y divide-gray-200 px-4">
-                <li class="py-4">
-                    <div class="flex items-center">
-                        <label for="todo1" class="ml-3 block text-gray-900">
-                            <span class="text-lg font-medium">Finish project proposal</span>
-                        </label>
-                    </div>
-                </li>
         </div>
-    
-      </div>
-      <script src="/js/script.js"></script>
+        <div>
+            <h1 class="text-gray-800 font-bold text-2xl uppercase">DON</h1>
+            <div class="bg-white shadow-md rounded p-4 mb-4">
+                <h3 class="font-bold">Task Title</h3>
+                <p>Description of the task.</p>
+                <div class="flex justify-between mt-2">
+                    <button class="bg-blue-500 text-white py-1 px-3 rounded">Edit</button>
+                    <button class="bg-red-500 text-white py-1 px- 3 rounded">Delete</button>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <script src="/js/script.js"></script>
 </body>
 </html>
