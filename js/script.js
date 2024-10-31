@@ -36,7 +36,7 @@ function maxdate() {
 
 maxdate();
 
- /*const today = new Date().toISOString().split('T');
+/*const today = new Date().toISOString().split('T');
  console.log(today);
  var day=today[0];
  var jour=day.split('-');
@@ -58,43 +58,64 @@ const property = document.getElementById('property');
 const category = document.getElementById('category');
 const dueDatel = document.getElementById('dueDate');
 const description = document.getElementById('description');
+const name = document.getElementById('name');
 
 
 
-
-
-submit.onclick = function() {
-
-
+submit.addEventListener("click", function() {
   let input = {
-    property, category, dueDate,
-    description
-  
+    property: property.value, 
+    category: category.value, 
+    dueDate: dueDate.value,   
+    description: description.value,
+    name : name.value,
   }
 
+  console.log(arrystorage);  
+  /*localStorage.setItem("name", name.value);
+  localStorage.setItem("property",property.value); 
+  localStorage.setItem(" category",  category.value); 
+  localStorage.setItem("dueDate", dueDate.value); 
+  localStorage.setItem("description", description.value); 
+*/
 
-
+arrystorage.push(input);
+window.localStorage.setItem("input", JSON.stringify(arrystorage));
 }
 
-submit.addEventListener("click", () => {
-  const userName = document.querySelector("name").value
-  userNameText.textContent = userName
-  localStorage.setItem("name", userName)
-})
 
 
-function displayUserName () {
-  const nameFromLocalStorage = localStorage.getItem("name")
 
-  if (nameFromLocalStorage) {
-    userNameText.textContent = nameFromLocalStorage
-  } else {
-    userNameText.textContent = "No name data in local storage"
-  }
-}
-
-displayUserName()
+);
 
 
+
+
+
+
+
+
+
+/************************************************************************************/
+
+const display = document.getElementById("display");
+const itemDiv = document.createElement("div");
+      itemDiv.innerHTML = `
+        <div class="bg-white shadow-md rounded p-4 mb-4">
+            <h3 class="font-bold">${item.name}</h3>
+            <p>Property: ${item.property}</p>
+            <p>Category: ${item.category}</p>
+            <p>Due Date: ${item.dueDate}</p>
+            <p>Description: ${item.description}</p>
+            <div class="flex justify-between mt-2">
+                <button class="bg-blue-500 text-white py-1 px-3 rounded">Edit</button>
+                <button class="bg-red-500 text-white py-1 px-3 rounded">Delete</button>
+            </div>
+        </div>
+      `;
+      display.appendChild(itemDiv);
+
+
+     
+/*window.localStorage.clear();*/
 /************************************************** */
-

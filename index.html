@@ -3,7 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple to-do list application to manage tasks efficiently.">
+    <meta name="description" content="A simple to-do list to practice javascript.">
+    <meta name="author" content="abderrazzak imily">
+    <meta name="keywords" content="HTML, CSS, JavaScript">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>To-Do List Application</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
@@ -82,15 +85,8 @@
     <!-- Task lists section -->
     <section class="flex justify-around">
         <div>
-            <h1 class="text-gray-800 font-bold text-2xl uppercase">TO DO</h1>
-            <div class="bg-white shadow-md rounded p-4 mb-4">
-                <h3 class="font-bold">Task Title</h3>
-                <p>Description of the task.</p>
-                <div class="flex justify-between mt-2">
-                    <button class="bg-blue-500 text-white py-1 px-3 rounded">Edit</button>
-                    <button class="bg-red-500 text-white py-1 px-3 rounded">Delete</button>
-                </div>
-            </div>
+            <h1 class="text-gray-800 font-bold text-2xl uppercase" id="display">TO DO</h1>
+            
         </div>
         <div>
             <h1 class="text-gray-800 font-bold text-2xl uppercase">DOING</h1>
@@ -115,7 +111,6 @@
             </div>
         </div>
     </section>
-
-    <script src="/js/script.js"></script>
+   <script src="/js/script.js"></script>
 </body>
 </html>
