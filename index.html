@@ -1,102 +1,116 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A simple to-do list to practice javascript.">
-    <meta name="author" content="abderrazzak imily">
+    <meta name="description" content="Une liste de tâches simple pour pratiquer JavaScript.">
+    <meta name="author" content="Abderrazzak Imily">
     <meta name="keywords" content="HTML, CSS, JavaScript">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do List Application</title>
+    <title>Application de Liste de Tâches</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-    <header class="flex p-20">
-        <button id="myBtn" data-modal-target="crud-modal" data-modal-toggle="crud-modal" class="block text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800" type="button">
-            Add Task
-        </button>
-    
-
-    <!-- Main modal -->
-    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
-        <div class="relative p-4 w-full max-w-md max-h-full ">
-            <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
-                <div class="flex items-center justify-between p-4 md:p-5 border-b rounded-t dark:border-gray-600">
-                    <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                        Create New Task
-                    </h3>
-                    <button id="myBtn2" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 ms-auto inline-flex justify-center items-center dark:hover:bg-gray-600 dark:hover:text-white" data-modal-toggle="crud-modal">
-                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
-                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+<body class="bg-gray-100">
+    <header>
+        <nav class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4 mb-4">
+            <div class="flex w-full flex-wrap items-center justify-between px-3">
+                <span class="ms-2 text-xl text-black dark:text-white">LISTE DE TÂCHES</span>
+                <div class="ms-5 flex w-[30%] items-center justify-between">
+                    <input
+                        type="search"
+                        class="relative m-0 block w-[1px] min-w-0 flex-auto rounded border border-solid border-secondary-500 bg-transparent bg-clip-padding px-3 py-1.5 text-base font-normal text-surface transition duration-300 ease-in-out focus:border-primary focus:text-gray-700 focus:shadow-inset focus:outline-none motion-reduce:transition-none dark:border-white/10 dark:bg-body-dark dark:text-white dark:placeholder:text-neutral-300 dark:autofill:shadow-autofill"
+                        placeholder="Recherche"
+                        aria-label="Recherche"
+                        aria-describedby="button-addon2" />
+                    <span class="flex items-center whitespace-nowrap rounded px-3 py-1.5 text-center text-base font-normal text-gray-600 dark:text-white [&>svg]:w-5" id="basic-addon2">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
                         </svg>
-                        <span class="sr-only">Close modal</span>
+                    </span>
+                </div>
+            </div>
+        </nav>
+        <section class="max-w-md mx-auto mb-8">
+            <div class="mb-4">
+                <button id="myBtn" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full h-12 transition duration-300 transform hover:scale-105 shadow-lg">
+                    Ajouter une Tâche
+                </button>
+            </div>
+        </section>
+    </header>
+
+    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+        <div class="relative p-4 w-full max-w-md max-h-full">
+            <div class="relative bg-white rounded-lg shadow-lg">
+                <div class="flex items-center justify-between p-4 border-b rounded-t">
+                    <h3 class="text-lg font-semibold text-gray-900">Créer une Nouvelle Tâche</h3>
+                    <button id="myBtn2" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-toggle="crud-modal">
+                        <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d ="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
+                        </svg>
+                        <span class="sr-only">Fer mer le modal</span>
                     </button>
                 </div>
-                <form class="p-4 md:p-5">
-                    <div class="grid gap-4 mb-4 grid-cols-2">
-                        <div class="col-span-2">
-                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Name</label>
-                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" placeholder="Task name" required>
+                <form class="p-4">
+                    <div class="grid gap-4 mb-4">
+                        <div>
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-900">Nom</label>
+                            <input type="text" name="name" id="name" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" placeholder="Nom de la tâche" required>
                         </div>
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="property" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Property</label>
-                            <select id="property" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select property</option>
+                        <div>
+                            <label for="property" class="block mb-2 text-sm font-medium text-gray-900">Propriété</label>
+                            <select id="property" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option selected>Choisir une propriété</option>
                                 <option value="P1">P1</option>
                                 <option value="P2">P2</option>
                                 <option value="P3">P3</option>
                             </select>
                         </div>
-                        <div class="col-span-2 sm:col-span-1">
-                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Category</label>
-                            <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-500 focus:border-primary-500 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500">
-                                <option selected="">Select category</option>
-                                <option value="TO DO">TO DO</option>
-                                <option value="DOING">DOING</option>
-                                <option value="DON">DON</option>
+                        <div>
+                            <label for="category" class="block mb-2 text-sm font-medium text-gray-900">Catégorie</label>
+                            <select id="category" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5">
+                                <option selected>Choisir une catégorie</option>
+                                <option value="TO DO">À FAIRE</option>
+                                <option value="DOING">EN COURS</option>
+                                <option value="DONE">FAIT</option>
                             </select>
                         </div>
-                        <div class="col-span-2">
-                            <label for="dueDate" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Due Date</label>
-                            <input type="date" id="dueDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-primary-500 dark:focus:border-primary-500" required>
+                        <div>
+                            <label for="dueDate" class="block mb-2 text-sm font-medium text-gray-900">Date d'échéance</label>
+                            <input type="date" name="dueDate" id="dueDate" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5" required>
                         </div>
-                        <div class="col-span-2">
-                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Product Description</label>
-                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-600 dark:border-gray-500 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-primary-500" placeholder="Write product description here"></textarea>
+                        <div>
+                            <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
+                            <textarea id="description" rows="4" class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="Description de la tâche"></textarea>
                         </div>
                     </div>
-                    <button id="submit" type="submit" class="text-white inline-flex items-center bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        Submit
-                    </button>
+                    <button id="submit" type="submit" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm w-full px-5 py-2.5 text-center">Soumettre</button>
                 </form>
             </div>
         </div>
     </div>
 
-    <!-- Search section -->
-    <section class="max-w-md mx-auto">
-        <div class="relative flex items-center w-full h-12 rounded-lg focus-within:shadow-lg bg-white overflow-hidden">
-            <div class="grid place-items-center h-full w-12 text-gray-300">
-            </div>
-            <input class="peer h-full w-full outline-none text-sm text-gray-700 pr-2" type="text" id="search" placeholder="Search something.." />
+    <section class="text-center mt-4">
+        <h2>TOTAL DES TACHES</h2>
+        <p id="todo-count" class="text-gray-700">Tâches à faire (À FAIRE) : 0</p>
+        <p id="doing-count" class="text-gray-700">Tâches en cours (EN COURS) : 0</p>
+        <p id="done-count" class="text-gray-700">Tâches terminées (FAIT) : 0</p>
+    </section>
+
+    <section class="flex justify-center gap-6 mt-8">
+        <div class="block p-6 rounded-lg shadow-lg bg-white w-1/4">
+            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">À FAIRE</h5>
+            <div id="display-todo"></div>
+        </div>
+        <div class="block p-6 rounded-lg shadow-lg bg-white w-1/4">
+            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">EN COURS</h5>
+            <div id="display-doing"></div>
+        </div>
+        <div class="block p-6 rounded-lg shadow-lg bg-white w-1/4">
+            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FAIT</h5>
+            <div id="display-done"></div>
         </div>
     </section>
- </header>
-    <!-- Task lists section -->
-    <section class="flex justify-around">
-            <div class="bg-blue-600">
-            <h1 class="text-gray-800 font-bold text-2xl uppercase">TO DO</h1>
-            <div class="text-gray-800 font-bold text-2xl uppercase" id="display"></div>
-            </div>
-            <div class="bg-gray-200">
-            <h1 class="text-gray-800 font-bold text-2xl uppercase">Doin</h1>
-            <div class="text-gray-800 font-bold text-2xl uppercase"></div>
-            </div>
-            <div class="bg-blue-800">
-            <h1 class="text-gray-800 font-bold text-2xl uppercase">Don</h1>
-            <div class="text-gray-800 font-bold text-2xl uppercase"></div>
-            </div>
-    </section>
-   <script src="/js/script.js"></script>
+
+    <script src="/asset/js/script.js"></script>
 </body>
 </html>
