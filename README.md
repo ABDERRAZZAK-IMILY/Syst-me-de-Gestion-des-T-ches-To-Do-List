@@ -1,4 +1,6 @@
 # Application de Liste de Tâches
+<img width="932" alt="image" src="https://github.com/user-attachments/assets/d0498bbf-557f-411a-9c9d-333d6d55fc24">
+
 
 ## Description
 Cette application de liste de tâches est un projet simple développé en HTML, CSS et JavaScript. Elle permet aux utilisateurs de gérer leurs tâches quotidiennes en les classant par catégories et en ajoutant des détails tels que la date d'échéance et la description. Ce projet a été conçu pour pratiquer et démontrer des compétences en développement web.
