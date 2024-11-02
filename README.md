@@ -34,3 +34,4 @@ Dans le cadre de Monsieur **Houssni Ouchad**.
 - **Code source** : [GitHub Repository](https://github.com/ABDERRAZZAK-IMILY/Syst-me-de-Gestion-des-T-ches-To-Do-List)
 - **lien de Deployment** : https://syst-me-de-gestion-des-t-ches-to-do-list.vercel.app/
 - **docmentation** :  https://www.canva.com/design/DAGVRhimnzQ/uzelEW6b9CeLKQi7wEON3g/edit?utm_content=DAGVRhimnzQ&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton
+**palning** : https://github.com/users/ABDERRAZZAK-IMILY/projects/2/views/1
