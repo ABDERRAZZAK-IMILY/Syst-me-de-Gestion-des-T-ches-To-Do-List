@@ -29,7 +29,7 @@ Cette application de liste de tâches est un projet simple développé en HTML, 
 
 ## Auteur
 - **Abderrazzak Imily** : Développeur principal du projet.
-
+Dans le cadre de Monsieur **Houssni Ouchad**.
 ## Liens
 - **Code source** : [GitHub Repository](https://github.com/ABDERRAZZAK-IMILY/Syst-me-de-Gestion-des-T-ches-To-Do-List)
 - **lien de Deployment** : https://syst-me-de-gestion-des-t-ches-to-do-list.vercel.app/
