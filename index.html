@@ -10,6 +10,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100">
+                <!-- En-tête de la page avec la barre de navigation -->
     <header>
         <nav class="relative flex w-full flex-wrap items-center justify-between bg-zinc-50 py-2 shadow-dark-mild dark:bg-neutral-700 lg:py-4 mb-4">
             <div class="flex w-full flex-wrap items-center justify-between px-3">
@@ -29,6 +30,7 @@
                 </div>
             </div>
         </nav>
+                <!-- Section pour le bouton d'ajout de tâche -->
         <section class="max-w-md mx-auto mb-8">
             <div class="mb-4">
                 <button id="myBtn" class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-lg w-full h-12 transition duration-300 transform hover:scale-105 shadow-lg">
@@ -37,12 +39,12 @@
             </div>
         </section>
     </header>
-
-    <div id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
+    <!-- section pour créer une nouvelle tâche -->
+    <section id="crud-modal" tabindex="-1" aria-hidden="true" class="hidden overflow-y-auto overflow-x-hidden fixed top-0 right-0 left-0 z-50 justify-center items-center w-full md:inset-0 h-[calc(100%-1rem)] max-h-full">
         <div class="relative p-4 w-full max-w-md max-h-full">
             <div class="relative bg-white rounded-lg shadow-lg">
                 <div class="flex items-center justify-between p-4 border-b rounded-t">
-                    <h3 class="text-lg font-semibold text-gray-900">Créer une Nouvelle Tâche</h3>
+                    <h1 class="text-lg font-semibold text-gray-900">Créer une Nouvelle Tâche</h1>
                     <button id="myBtn2" type="button" class="text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm w-8 h-8 inline-flex justify-center items-center" data-modal-toggle="crud-modal">
                         <svg class="w-3 h-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 14 14">
                             <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d ="m1 1 6 6m0 0 6 6M7 7l6-6M7 7l-6 6"/>
@@ -87,30 +89,30 @@
                 </form>
             </div>
         </div>
-    </div>
-
+    </section>
+    <!-- Section pour afficher les statistiques des tâches -->
     <section class="text-center mt-4">
         <h2>TOTAL DES TACHES</h2>
         <p id="todo-count" class="text-gray-700">Tâches à faire (À FAIRE) : 0</p>
         <p id="doing-count" class="text-gray-700">Tâches en cours (EN COURS) : 0</p>
         <p id="done-count" class="text-gray-700">Tâches terminées (FAIT) : 0</p>
     </section>
-
+        <!-- Section pour afficher les tâches -->
     <section class="flex flex-col md:flex-row justify-center gap-6 mt-8">
         <div class="block p-6 rounded-lg shadow-lg bg-white w-full md:w-1/4">
-            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">À FAIRE</h5>
+            <h3 class="text-gray-900 text-xl leading-tight font-medium mb-2">À FAIRE</h3>
             <div id="display-todo"></div>
         </div>
         <div class="block p-6 rounded-lg shadow-lg bg-white w-full md:w-1/4">
-            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">EN COURS</h5>
+            <h3 class="text-gray-900 text-xl leading-tight font-medium mb-2">EN COURS</h3>
             <div id="display-doing"></div>
         </div>
         <div class="block p-6 rounded-lg shadow-lg bg-white w-full md:w-1/4">
-            <h5 class="text-gray-900 text-xl leading-tight font-medium mb-2">FAIT</h5>
+            <h3 class="text-gray-900 text-xl leading-tight font-medium mb-2">FAIT</h3>
             <div id="display-done"></div>
         </div>
     </section>
-
+    <!-- Inclusion du fichier JavaScript -->
     <script src="/asset/js/script.js"></script>
 </body>
 </html>
